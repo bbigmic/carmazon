@@ -30,7 +30,7 @@ export default function Home() {
       </section>
 
       {/* Sekcja Sprzedaż Samochodów */}
-      <section className="py-20 bg-black relative overflow-hidden">
+      <section id="sprzedaz" className="py-20 bg-black relative overflow-hidden scroll-mt-20">
         <div className="absolute inset-0 bg-[url('/images/sprzedaz/background.jpg')] bg-cover bg-center opacity-20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center">

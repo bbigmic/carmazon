@@ -44,6 +44,11 @@ export default function Navbar() {
                 className={`text-sm font-medium transition-colors ${
                   isScrolled ? 'text-black hover:text-red-600' : 'text-white hover:text-red-400'
                 }`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  const section = document.getElementById('sprzedaz');
+                  section?.scrollIntoView({ behavior: 'smooth' });
+                }}
               >
                 Sprzedaż
               </Link>
