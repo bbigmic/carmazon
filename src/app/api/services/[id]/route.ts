@@ -1,15 +1,21 @@
 import { NextRequest, NextResponse } from 'next/server';
 import prisma from '@/lib/prisma';
 
+type Props = {
+  params: {
+    id: string;
+  };
+};
+
 // DELETE /api/services/[id]
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  props: Props
 ) {
   try {
     await prisma.service.delete({
       where: {
-        id: params.id
+        id: props.params.id
       }
     });
     return NextResponse.json({ message: 'Usługa została usunięta' });
